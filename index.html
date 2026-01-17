@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontSite | Цифровые решения будущего</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <!-- Тема и загрузка -->
+    <div class="theme-toggle">
+        <button id="themeSwitch" aria-label="Переключить тему">
+            <div class="theme-switch-inner"></div>
+        </button>
+    </div>
+
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">FrontSite</div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">FrontSite</span>
+            </a>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link"><span>Главная</span></a></li>
+                <li><a href="#services" class="nav-link"><span>Услуги</span></a></li>
+                <li><a href="#portfolio" class="nav-link"><span>Портфолио</span></a></li>
+                <li><a href="#process" class="nav-link"><span>Процесс</span></a></li>
+                <li><a href="#contact" class="nav-link"><span>Контакты</span></a></li>
+                <li><a href="#contact" class="nav-btn">Начать проект</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой секция -->
+        <section id="home" class="hero">
+            <canvas id="heroCanvas"></canvas>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✨ Цифровые решения будущего</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Создаём <span class="highlight">инновационные</span></span>
+                    <span class="title-line">веб-<span class="text-gradient">решения</span></span>
+                </h1>
+                <p class="hero-subtitle">FrontSite — ваш партнёр в создании современных, быстрых и адаптивных цифровых продуктов, которые выделяют ваш бренд</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Обсудить проект</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <span>Смотреть работы</span>
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Проектов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">Довольных клиентов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Лет опыта</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card" id="card1">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-card" id="card2">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="floating-card" id="card3">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-text">Листайте вниз</div>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Услуги -->
+        <section id="services" class="section services">
+            <div class="section-header">
+                <div class="section-badge">Наши услуги</div>
+                <h2 class="section-title">Мы создаём <span class="text-gradient">цифровые продукты</span><br> которые работают</h2>
+                <p class="section-subtitle">Полный цикл разработки — от идеи до запуска</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Веб-разработка</h3>
+                        <p>Современные сайты и веб-приложения на React, Vue.js и Next.js с использованием TypeScript</p>
+                        <ul class="service-features">
+                            <li>SPA/PWA приложения</li>
+                            <li>Серверный рендеринг</li>
+                            <li>Микро-фронтенды</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Мобильные решения</h3>
+                        <p>Кросс-платформенные мобильные приложения с нативным пользовательским опытом</p>
+                        <ul class="service-features">
+                            <li>React Native</li>
+                            <li>Flutter</li>
+                            <li>iOS & Android</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Искусственный интеллект</h3>
+                        <p>Интеграция AI и машинного обучения для создания умных цифровых продуктов</p>
+                        <ul class="service-features">
+                            <li>Чат-боты</li>
+                            <li>Аналитика данных</li>
+                            <li>Персонализация</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Оптимизация и рост</h3>
+                        <p>Ускорение и масштабирование существующих продуктов для роста бизнеса</p>
+                        <ul class="service-features">
+                            <li>Performance Audit</li>
+                            <li>SEO оптимизация</li>
+                            <li>Конверсия</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Портфолио -->
+        <section id="portfolio" class="section portfolio">
+            <div class="section-header">
+                <div class="section-badge">Наши работы</div>
+                <h2 class="section-title">Проекты, которые <span class="text-gradient">вдохновляют</span></h2>
+                <p class="section-subtitle">Посмотрите, как мы превращаем идеи в успешные продукты</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="zoom-in">
+                    <div class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Nexus Bank</h3>
+                                <p>Финтех платформа нового поколения</p>
+                                <a href="#" class="portfolio-link">Посмотреть кейс →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Финтех</span>
+                        <h3>Цифровой банкинг</h3>
+                        <p>Полный цикл разработки банковской платформы с AI-ассистентом</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>HealthTrack</h3>
+                                <p>Телемедицинская платформа</p>
+                                <a href="#" class="portfolio-link">Посмотреть кейс →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Медицина</span>
+                        <h3>Telemedicine App</h3>
+                        <p>Мобильное приложение для удалённого мониторинга здоровья</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>EduFuture</h3>
+                                <p>Платформа онлайн-образования</p>
+                                <a href="#" class="portfolio-link">Посмотреть кейс →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Образование</span>
+                        <h3>EdTech Platform</h3>
+                        <p>Интерактивная обучающая платформа с VR-модулями</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технологии -->
+        <section class="section technologies">
+            <div class="section-header">
+                <div class="section-badge">Технологии</div>
+                <h2 class="section-title">Современный стек <span class="text-gradient">технологий</span></h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item" data-aos="fade-up">
+                    <div class="tech-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <span>React</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="50">
+                    <div class="tech-icon">
+                        <i class="fab fa-vuejs"></i>
+                    </div>
+                    <span>Vue.js</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="tech-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <span>Python</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <span>AWS</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="tech-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <span>Docker</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Процесс работы -->
+        <section id="process" class="section process">
+            <div class="section-header">
+                <div class="section-badge">Как мы работаем</div>
+                <h2 class="section-title">Процесс создания <span class="text-gradient">совершенства</span></h2>
+            </div>
+            <div class="process-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Исследование и стратегия</h3>
+                        <p>Глубокий анализ рынка, конкурентов и определение ключевых метрик успеха</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Дизайн и прототипирование</h3>
+                        <p>Создание интерактивных прототипов и дизайн-системы</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Разработка и тестирование</h3>
+                        <p>Итеративная разработка с тестированием на каждом этапе</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Запуск и поддержка</h3>
+                        <p>Деплой продукта и постоянная техническая поддержка</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <div class="section-badge">Контакты</div>
+                <h2 class="section-title">Готовы начать <span class="text-gradient">проект?</span></h2>
+                <p class="section-subtitle">Давайте обсудим вашу идею и создадим нечто выдающееся вместе</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Свяжитесь с нами</h3>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>hello@frontsite.dev</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Телефон</h4>
+                                <p>+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Офис</h4>
+                                <p>Москва, Пресненская наб., 12</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <h4>Мы в соцсетях</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Выберите услугу</option>
+                            <option value="web">Веб-разработка</option>
+                            <option value="mobile">Мобильные приложения</option>
+                            <option value="ai">AI решения</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Расскажите о вашем проекте..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>Отправить заявку</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">FrontSite</span>
+                </div>
+                <p>Создаём цифровые решения, которые меняют будущее</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Услуги</h4>
+                    <a href="#">Веб-разработка</a>
+                    <a href="#">Мобильные приложения</a>
+                    <a href="#">UI/UX дизайн</a>
+                    <a href="#">Консалтинг</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Компания</h4>
+                    <a href="#">О нас</a>
+                    <a href="#">Команда</a>
+                    <a href="#">Карьера</a>
+                    <a href="#">Блог</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Правовая информация</h4>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Cookie policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FrontSite. Все права защищены.</p>
+            <div class="footer-lang">
+                <button class="lang-btn active">RU</button>
+                <button class="lang-btn">EN</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
